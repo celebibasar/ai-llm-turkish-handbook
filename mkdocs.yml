@@ -1,0 +1,81 @@
+site_name: AI & LLM Mühendisliği El Kitabı
+site_description: ML temellerinden LLM geliştirmeye, RAG'den agent'lara; sezgisel ama teknik olarak doğru bir Türkçe el kitabı.
+# repo_url: https://github.com/<kullanici>/<repo>   # yayınlarken doldurun
+
+theme:
+  name: material
+  language: tr
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      toggle: { icon: material/weather-night, name: Koyu tema }
+    - scheme: slate
+      toggle: { icon: material/weather-sunny, name: Açık tema }
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
+  - github-callouts            # "> [!NOTE]" kutuları hem GitHub'da hem sitede çalışsın (pip: markdown-callouts)
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Ana Sayfa: index.md
+  - "1. Temeller":
+      - "1.1 Makine Öğrenmesi Nedir?": 01-temeller/01-ml-nedir.md
+      - "1.2 Öğrenme Türleri": 01-temeller/02-ogrenme-turleri.md
+      - "1.3 Sinir Ağları (Neural Networks)": 01-temeller/03-sinir-aglari.md
+      - "1.4 Geri Yayılım (Backpropagation)": 01-temeller/04-geri-yayilim.md
+      - "1.5 Eğitim Pratiği": 01-temeller/05-egitim-pratigi.md
+  - "2. Derin Öğrenme & Transformer Devrimi":
+      - "2.1 Tokenization": 02-transformer/01-tokenization.md
+      - "2.2 Embeddings (Vektör Uzayı)": 02-transformer/02-embeddings.md
+      - "2.3 Dikkat Mekanizması (Self-Attention)": 02-transformer/03-self-attention.md
+      - "2.4 Transformer Mimarisi": 02-transformer/04-transformer-mimarisi.md
+      - "2.5 Metin Üretimi (Decoding)": 02-transformer/05-metin-uretimi.md
+  - "3. LLM Geliştirme Süreci":
+      - "3.1 Ön Eğitim (Pre-training)": 03-llm-gelistirme/01-pre-training.md
+      - "3.2 Veri Hazırlığı": 03-llm-gelistirme/02-veri-hazirligi.md
+      - "3.3 Ölçekleme Yasaları (Scaling Laws)": 03-llm-gelistirme/03-scaling-laws.md
+      - "3.4 Altyapı ve Maliyet Dinamikleri": 03-llm-gelistirme/04-maliyet-dinamikleri.md
+  - "4. Hizalama ve Özelleştirme (Alignment & Fine-Tuning)":
+      - "4.1 Özelleştirme Haritası": 04-hizalama-ve-fine-tuning/01-ozellestirme-haritasi.md
+      - "4.2 SFT (Supervised Fine-Tuning)": 04-hizalama-ve-fine-tuning/02-sft.md
+      - "4.3 LoRA / QLoRA": 04-hizalama-ve-fine-tuning/03-lora-qlora.md
+      - "4.4 RLHF (Reinforcement Learning from Human Feedback)": 04-hizalama-ve-fine-tuning/04-rlhf.md
+      - "4.5 DPO (Direct Preference Optimization)": 04-hizalama-ve-fine-tuning/05-dpo.md
+  - "5. RAG (Retrieval-Augmented Generation)":
+      - "5.1 RAG Nedir?": 05-rag/01-rag-nedir.md
+      - "5.2 Chunking Stratejileri": 05-rag/02-chunking.md
+      - "5.3 Vektör Veritabanları": 05-rag/03-vektor-veritabanlari.md
+      - "5.4 Hybrid Search": 05-rag/04-hybrid-search.md
+      - "5.5 Reranking": 05-rag/05-reranking.md
+      - "5.6 GraphRAG": 05-rag/06-graphrag.md
+  - "6. AI Agents & Tool Use":
+      - "6.1 Tool Use (Function Calling)": 06-agents/01-tool-use.md
+      - "6.2 ReAct Mimarisi": 06-agents/02-react.md
+      - "6.3 Memory Yönetimi": 06-agents/03-memory.md
+      - "6.4 Multi-Agent Sistemler": 06-agents/04-multi-agent.md
+      - "6.5 MCP (Model Context Protocol)": 06-agents/05-mcp.md
+  - "7. Değerlendirme ve Prodüksiyon (LLMOps)":
+      - "7.1 Eval Metrikleri": 07-llmops/01-eval.md
+      - "7.2 Hallucination Azaltma": 07-llmops/02-hallucination.md
+      - "7.3 Quantization": 07-llmops/03-quantization.md
+      - "7.4 Latency / Throughput Optimizasyonu": 07-llmops/04-latency-throughput.md
+      - "7.5 İzleme ve Güvenlik": 07-llmops/05-izleme-ve-guvenlik.md
+  - "8. Ufuk Çizgisi: AGI & Gelecek":
+      - "8.1 Reasoning Modelleri": 08-ufuk-cizgisi/01-reasoning-modelleri.md
+      - "8.2 World Models (Dünya Modelleri)": 08-ufuk-cizgisi/02-world-models.md
+      - "8.3 AI Safety": 08-ufuk-cizgisi/03-ai-safety.md
+      - "8.4 AGI Tanımı ve Tartışmalar": 08-ufuk-cizgisi/04-agi.md
